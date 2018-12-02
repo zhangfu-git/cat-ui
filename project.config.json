@@ -1,0 +1,22 @@
+{
+	"miniprogramRoot": "dist/",
+	"projectname": "my_taro_ui",
+	"description": "日程计划小程序",
+	"appid": "wx4dba79a8597b847b",
+	"setting": {
+		"urlCheck": true,
+		"es6": false,
+		"postcss": false,
+		"minified": false,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+  "condition": {},
+  "cloudfunctionRoot": "./cloud-functions",
+  "packOptions": {
+    "ignore": [{
+      "type": "folder",
+      "value": "./cloud-functions"
+    }]
+  }
+}
