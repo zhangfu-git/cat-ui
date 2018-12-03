@@ -8,3 +8,4 @@ export { default as CatSearchBar } from './components/CatSearchBar/index.js';
 
 export { default as CatRow } from './components/CatRow/index.js';
 export { default as CatCol } from './components/CatCol/index.js';
+export { default as CatGrid } from './components/CatGrid/index.js';

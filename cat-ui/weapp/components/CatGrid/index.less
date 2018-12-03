@@ -1,0 +1,58 @@
+@import '../common/index.less';
+
+.cat-grid__group {
+  display: flex;
+}
+
+.cat-grid {
+  position: relative;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  padding: 20rpx 10rpx;
+  .cat-grid-image-box {
+    width: 60rpx;
+    height: 60rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .cat-grid-image {
+    width: 100%;
+    height: 100%;
+  }
+  .cat-grid-title {
+    margin-top: 10rpx;
+    color: @content;
+    text-align: center;
+  }
+}
+
+.cat-grid__has-border{
+  &::after {
+    content: '';
+    position: absolute;
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    box-sizing: border-box;
+    pointer-events: none;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    border: 0 solid #d6e4ef;
+    -webkit-transform: scale(.5);
+    transform: scale(.5);
+    border-width: 1PX;
+    border-top: none;
+    border-left: none;
+  }  
+}
+
+.cat-grid__mode-square {
+  flex-direction: column;
+}
+.cat-grid__mode-rect {
+  flex-direction: row;
+}
