@@ -14,7 +14,8 @@
     "dev:alipay": "npm run build:alipay -- --watch",
     "dev:h5": "npm run build:h5 -- --watch",
     "dev:rn": "npm run build:rn -- --watch",
-    "cloud": "cp -Rf cloud-functions dist/cloud-functions"
+    "cloud": "cp -Rf cloud-functions dist/cloud-functions",
+    "build_ui": "TARO_BUILD_TYPE=ui taro build --ui"
   },
   "author": "",
   "license": "MIT",

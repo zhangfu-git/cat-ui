@@ -1,3 +1,6 @@
+const path = require('path');
+const isBuildUI = process.env.TARO_BUILD_TYPE === 'ui';
+
 const config = {
   projectName: 'taro_my_calendor',
   date: '2018-11-23',
@@ -8,7 +11,7 @@ const config = {
     '828': 1.81 / 2
   },
   sourceRoot: 'src',
-  outputRoot: 'dist',
+  outputRoot: isBuildUI ? 'cat-ui': 'dist',
   plugins: {
     babel: {
       sourceMap: true,
@@ -82,5 +85,35 @@ module.exports = function (merge) {
   if (process.env.NODE_ENV === 'development') {
     return merge({}, config, require('./dev'))
   }
+
+  // h5 build UI
+  if (isBuildUI) {
+    Object.assign(config.h5, {
+      enableSourceMap: false,
+      enableExtract: false,
+      enableDll: false
+    })
+    config.h5.webpackChain = chain => {
+      chain.plugins.delete('htmlWebpackPlugin')
+      chain.plugins.delete('addAssetHtmlWebpackPlugin')
+      chain.merge({
+        output: {
+          path: path.join(process.cwd(), 'cat-ui', 'h5'),
+          filename: 'index.js',
+          libraryTarget: 'umd',
+          library: 'cat-ui'
+        },
+        externals: {
+          nervjs: 'commonjs2 nervjs',
+          classnames: 'commonjs2 classnames',
+          '@tarojs/components': 'commonjs2 @tarojs/components',
+          '@tarojs/taro-h5': 'commonjs2 @tarojs/taro-h5',
+          'weui': 'commonjs2 weui'
+        }
+      })
+    }
+  }
+
   return merge({}, config, require('./prod'))
+  
 }
