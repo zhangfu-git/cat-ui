@@ -7,12 +7,12 @@
 export function className() {
   const arr = Array.prototype.slice.call(arguments);
   let classnames = [];
-  arr.forEach((item) => {
+  arr.forEach(item => {
     if (isString(item)) {
-      classnames.push(item)
+      classnames.push(item);
     } else if (isObject(item)) {
-      const arr = _isNeedClassName(item)
-      classnames = classnames.concat(arr)
+      const arr = _isNeedClassName(item);
+      classnames = classnames.concat(arr);
     }
   });
   classnames = classnames.join(' ');
@@ -29,7 +29,7 @@ function _isNeedClassName(obj) {
   const arr = [];
   for (let i = 0, len = keys.length; i < len; i++) {
     if (obj[keys[i]]) {
-      arr.push(keys[i])
+      arr.push(keys[i]);
     }
   }
   return arr;
@@ -53,7 +53,7 @@ export function isObject(val) {
 }
 
 export function isFunction(val) {
-  console.log(getType(val), '#################')
+  console.log(getType(val), '#################');
   return getType(val) === '[object Function]';
 }
 
@@ -74,7 +74,7 @@ export function filterProp(props, arr) {
   if (!isArray(arr)) throw 'arr not Array';
 
   let newProps = {};
-  arr.forEach((item) => {
+  arr.forEach(item => {
     if (!props.hasOwnProperty[item]) {
       newProps[item] = props[item];
     }

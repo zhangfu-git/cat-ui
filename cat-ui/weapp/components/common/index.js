@@ -53,6 +53,7 @@ export function isObject(val) {
 }
 
 export function isFunction(val) {
+  console.log(getType(val), '#################')
   return getType(val) === '[object Function]';
 }
 

@@ -4,3 +4,7 @@ export { default as CatPanel } from './components/CatPanel/index.js';
 export { default as CatButton } from './components/CatButton/index.js';
 export { default as CatAvatar } from './components/CatAvatar/index.js';
 export { default as CatRate } from './components/CatRate/index.js';
+export { default as CatSearchBar } from './components/CatSearchBar/index.js';
+
+export { default as CatRow } from './components/CatRow/index.js';
+export { default as CatCol } from './components/CatCol/index.js';

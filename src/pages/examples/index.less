@@ -1,3 +1,6 @@
+@import '../../index.less';
+@import '../../utils/global.less';
+
 .title {
   text-align: center;
   font-weight: 700;
@@ -28,4 +31,19 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+.col {
+  background-color: #99a9bf;
+  border: 1rpx solid #fff;
+  box-sizing: border-box;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.icon {
+  font-size: 50rpx;
+  color: @content;
+}
+.icon-label {
+  color: @subColor;
 }

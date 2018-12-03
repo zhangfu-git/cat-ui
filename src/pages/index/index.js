@@ -1,7 +1,7 @@
 import Taro, { Component } from '@tarojs/taro'
 import { View, Text, Swiper, SwiperItem, Image, ScrollView } from '@tarojs/components'
 import StandarLogin from '../../components/StandarLogin';
-import { CatList, CatIcon } from '../../index.js'
+import { CatList, CatIcon, CatButton } from '../../index.js'
 import './index.less';
 
 export default class Index extends Component {
@@ -22,7 +22,7 @@ export default class Index extends Component {
   async componentDidMount () {
     const openId = wx.getStorageSync('openId');
     if (!openId) {
-      this.showLoginBtn();
+      // this.showLoginBtn();
     } else {
       this.setState({
         isLogin: true
@@ -46,6 +46,11 @@ export default class Index extends Component {
     this.login(user);
     this.setState({
       isShowLogin: false
+    })
+  }
+  showLoginModule() {
+    this.setState({
+      isShowLogin: true
     })
   }
 
@@ -97,13 +102,49 @@ export default class Index extends Component {
             <CatIcon type="icon-camera" className="mr10"></CatIcon>
           }
         />
+        <CatList
+          isLink
+          src="/pages/examples/layout"
+          title="栅格布局 组件"
+          renderIcon={
+            <CatIcon
+              type="paint"
+              className="mr10"
+            />
+          }
+        />
+        <CatList
+          isLink
+          src="/pages/examples/searchBars"
+          title="searBar 组件"
+          renderIcon={
+            <CatIcon
+              type="search"
+              className="mr10"
+            />
+          }
+        />
+        <CatList
+          isLink
+          src="/pages/examples/icon"
+          title="Icon 组件"
+          renderIcon={
+            <CatIcon
+              type="magic"
+              className="mr10"
+            />
+          }
+        />
         {
           this.state.isLogin ?
           <View class="tips">
-            暂时未开放
+            项目地址: https://github.com/zhangfu-git/cat-ui
           </View>
           :
-          <View class="tips">未登录无法查看</View>
+          <View className="text-center">
+            <View class="tips">未登录可能影响部分组件预览</View>
+            <CatButton type="primary" onClick={this.showLoginModule}>点击登录</CatButton>
+          </View>
         }
       </View>
     )

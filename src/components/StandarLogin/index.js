@@ -1,5 +1,5 @@
 import Taro, { Component } from '@tarojs/taro';
-import { View, Button, Block } from '@tarojs/components';
+import { View, Button, Block, Image } from '@tarojs/components';
 import './index.less';
 
 export default class StandarLogin extends Component {
@@ -24,12 +24,10 @@ export default class StandarLogin extends Component {
           &&
           <View className="standar-login">
             <View class="tips">
-              <View>UI还在开发中...</View>
-              <View>
-                参与或者关注进度请点击下面按钮
-              </View>
+              <Image mode="aspectFit" src="/images/logo.jpg"></Image>
+              <View>cat-ui</View>
             </View>
-            <Button open-type="getUserInfo" onGetUserInfo={this.handleGetUserInfo.bind(this)}>关注进度</Button>
+            <Button open-type="getUserInfo" onGetUserInfo={this.handleGetUserInfo.bind(this)}>登录</Button>
           </View>
         }
       </Block>

@@ -8,6 +8,9 @@ class App extends Component {
   config = {
     pages: [
       'pages/index/index',
+      'pages/examples/icons',
+      'pages/examples/searchBars',
+      'pages/examples/layout',
       'pages/examples/rates',
       'pages/examples/avatars',
       'pages/guide/index',

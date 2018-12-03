@@ -44,6 +44,7 @@ export default class CatButton extends Component {
         onGetUserInfo={onGetUserInfo}
         onGetPhoneNumber={onGetPhoneNumber}
         lang={lang}
+        onClick={this.props.onClick}
       >
         {!loading && this.props.renderPrefix}
         {this.props.children}
