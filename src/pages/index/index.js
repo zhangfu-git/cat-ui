@@ -85,19 +85,16 @@ export default class Index extends Component {
         <CatList
           isLink
           src="/pages/examples/buttons"
-          title="Button 组件"
+          title="Button组件"
           // label="按钮UI"
           renderIcon= {
             <CatIcon type="icon-cascades" className="mr10" />
-          }
-          renderFooter={
-            <Text>详细</Text>
           }
         />
         <CatList
           isLink
           src="/pages/examples/avatars"
-          title="Avatar 组件"
+          title="Avatar组件"
           renderIcon={
             <CatIcon type="icon-camera" className="mr10"></CatIcon>
           }
@@ -105,7 +102,7 @@ export default class Index extends Component {
         <CatList
           isLink
           src="/pages/examples/layout"
-          title="栅格布局 组件"
+          title="栅格布局组件"
           renderIcon={
             <CatIcon
               type="paint"
@@ -116,7 +113,7 @@ export default class Index extends Component {
         <CatList
           isLink
           src="/pages/examples/searchBars"
-          title="searBar 组件"
+          title="searBar组件"
           renderIcon={
             <CatIcon
               type="search"
@@ -127,10 +124,45 @@ export default class Index extends Component {
         <CatList
           isLink
           src="/pages/examples/icon"
-          title="Icon 组件"
+          title="Icon组件"
           renderIcon={
             <CatIcon
               type="magic"
+              className="mr10"
+            />
+          }
+        />
+        <CatList
+          isLink
+          src="/pages/examples/grids"
+          title="Grid组件"
+          renderIcon={
+            <CatIcon
+              type="apps"
+              className="mr10"
+            />
+          }
+        />
+        <CatList
+          // isLink
+          title="List组件"
+          renderIcon= {
+            <CatIcon
+              type="sort"
+              className="mr10"
+            />
+          }
+          renderFooter={
+            <Text>当前就是List用例</Text>
+          }
+        />
+        <CatList
+          title="FormButton"
+          src="/pages/examples/formButton"
+          isLink
+          renderIcon={
+            <CatIcon
+              type="medal"
               className="mr10"
             />
           }
