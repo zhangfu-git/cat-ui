@@ -9,18 +9,23 @@ export default class SearchBars extends Component {
       <View className="page-container">
         <View className="title">搜索组件示例</View>
         <CatPanel
-          title="链接型"
+          title="跳转型"
           className="bg"
           isNoBorder
         >
           <CatSearchBar
             isLink
           />
+        </CatPanel>
+        <CatPanel
+          title="单图标跳型"
+          isNoBorder
+        >
           <CatSearchBar
             isLink
             isOnlyIcon
-          />
-        </CatPanel>
+          />      
+        </CatPanel>        
         <CatPanel
           title="普通型"
           isNoBorder

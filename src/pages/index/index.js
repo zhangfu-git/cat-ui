@@ -123,7 +123,7 @@ export default class Index extends Component {
         />
         <CatList
           isLink
-          src="/pages/examples/icon"
+          src="/pages/examples/icons"
           title="Icon组件"
           renderIcon={
             <CatIcon
