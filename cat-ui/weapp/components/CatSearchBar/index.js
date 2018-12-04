@@ -17,7 +17,6 @@ export default class CatSearchBar extends Component {
   }
   navigateTo() {
     const { path, isLink } = this.props;
-    console.log('跳转链接', path)
     if (isLink && path) {
       Taro.navigateTo({
         url: path
@@ -38,7 +37,6 @@ export default class CatSearchBar extends Component {
   }
   onSubmit() {
     const { value } = this.state;
-    console.log('点击了搜索按钮', value);
     this.props.onChange(value);
   }
   onEmpty() {

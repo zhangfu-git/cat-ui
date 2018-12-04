@@ -30,11 +30,10 @@ export default class CatGrid extends Component {
     this.props.onClick(item, currIndex);
   }
   render() {
-    const { data, columnNum, mode, hasBorder } = this.props;
+    let { data, columnNum, mode, hasBorder } = this.props;
     if (!isNumber(columnNum)) throw 'xCount not number';
     const dataLen = data.length;
-    const group = data.length / parseInt(columnNum, 10);
-
+    columnNum = parseInt(columnNum, 10);
     let gridList = [];
     for (let i = 0; i < dataLen; i = i + columnNum) {
       let groupList = [];

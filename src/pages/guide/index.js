@@ -73,7 +73,7 @@ export default class Detail extends Component {
             shape="circle"
             className="fb-btn"
           >
-            进入
+            查看
           </FormButton>
           <View className="wave"></View>
         </View>
