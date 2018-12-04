@@ -70,9 +70,12 @@ export default class Detail extends Component {
             onGetFormId={this.onGetFormId}
             size="large"
             type="theme"
+            shape="circle"
+            className="fb-btn"
           >
             进入
           </FormButton>
+          <View className="wave"></View>
         </View>
       </View>
     )
