@@ -8,8 +8,9 @@ class App extends Component {
   config = {
     pages: [
       'pages/guide/index',
-      'pages/examples/curtain',
       'pages/index/index',
+      'pages/examples/cardList',
+      'pages/examples/curtain',
       'pages/examples/formButton',
       'pages/examples/grids',
       'pages/examples/icons',
@@ -20,6 +21,7 @@ class App extends Component {
       'pages/examples/buttons',
     ],
     window: {
+      backgroundColor: '#f1f1f1',
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
       navigationBarTitleText: 'WeChat',

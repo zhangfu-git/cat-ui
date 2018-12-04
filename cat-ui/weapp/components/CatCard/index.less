@@ -1,0 +1,95 @@
+// 控制图片的位置
+.cat-card {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  background-color: #fff;
+  padding: 10rpx;
+  margin-bottom: 10rpx;
+  box-sizing: border-box;
+  &.cat-card__img-top {
+    flex-direction: column-reverse;
+    .cat-card__img-box {
+      margin-bottom: 20rpx;
+    }
+  }
+  &.cat-card__img-bottom {
+    flex-direction: column;
+    .cat-card__img-box {
+      margin-top: 20rpx;
+    }    
+  }
+  &.cat-card__img-right {
+    flex-direction: row;
+    .cat-card__img-box {
+      margin-left: 20rpx;
+    }    
+  }
+  &.cat-card__img-left {
+    flex-direction: row-reverse;
+    .cat-card__img-box {
+      margin-right: 20rpx;
+    }    
+  }
+}
+
+.cat-card__main {
+  flex: 1;
+  padding: 10rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+// 控制图片的形状（大小）
+.cat-card__img-rect-w {
+  .cat-card__img-box {
+    width: 260rpx;
+    height: 200rpx;
+  }
+  .cat-card__main {
+    height: 200rpx;
+    overflow: hidden;
+  }
+}
+.cat-card__img-rect-h {
+  .cat-card__img-box {
+    width: 200rpx;
+    height: 260rpx;
+  }
+  .cat-card__main {
+    height: 260rpx;
+    overflow: hidden;
+  }
+}
+.cat-card__img-square {
+  .cat-card__img-box {
+    width: 200rpx;
+    height: 200rpx;
+  }
+  .cat-card__main {
+    height: 200rpx;
+    overflow: hidden;
+  }
+}
+
+// 主要容器的大小
+.cat-card__main {
+  flex: 1;
+}
+
+// 图片的样式
+.cat-card-img {
+  width: 100%;
+  height: 100%;
+}
+
+.cat-card__img-bottom,
+.cat-card__img-top
+{
+  .cat-card__img-box {
+    width: 100%;
+  }
+  .cat-card__main {
+    height: inherit;
+  }
+}

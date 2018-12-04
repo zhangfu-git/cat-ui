@@ -168,11 +168,23 @@ export default class Index extends Component {
           }
         />
         <CatList
+          isLink
           title="CatCurtain组件"
           src="/pages/examples/curtain"
           renderIcon={
             <CatIcon
               type="barcode"
+              className="mr10"
+            />
+          }
+        />
+        <CatList
+          isLink
+          title="CatCard组件"
+          src="/pages/examples/cardList"
+          renderIcon={
+            <CatIcon
+              type="sort"
               className="mr10"
             />
           }
