@@ -10,3 +10,4 @@ export { default as CatRow } from './components/CatRow/index.js';
 export { default as CatCol } from './components/CatCol/index.js';
 export { default as CatGrid } from './components/CatGrid/index.js';
 export { default as CatFormButton } from './components/CatFormButton/index.js';
+export { default as CatCurtain } from './components/CatCurtain/index.js';

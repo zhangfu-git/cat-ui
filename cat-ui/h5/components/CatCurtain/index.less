@@ -1,0 +1,44 @@
+.cat-curtain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(0,0,0,.3); 
+}
+.cat-curtain__container {
+  display: flex;
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.cat-curtain__body {
+  position: relative;
+  overflow: visible;
+  min-height: 70%;
+  width: 100%;
+}
+.cat-curtain__img-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.cat-curtain__close-box {
+  position: absolute;
+  width: 100%; 
+  font-size: 80rpx;
+  color: #fff;
+  &.close-btn__top {
+    top: -50PX;
+    text-align: right;
+  }
+  &.close-btn__bottom {
+    bottom: -50PX;
+    text-align: center;
+  }
+}
