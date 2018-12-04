@@ -1,9 +1,12 @@
 import Taro, { Component } from '@tarojs/taro';
-import { View, Swiper, SwiperItem } from '@tarojs/components';
+import { View } from '@tarojs/components';
 import { CatSearchBar, CatPanel  } from '../../index.js';
 import './index.less';
 
 export default class SearchBars extends Component {
+  config = {
+    navigationBarTitleText: 'CatSearchBar 评分组件'
+  }
   render() {
     return (
       <View className="page-container">

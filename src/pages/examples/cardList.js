@@ -7,6 +7,9 @@ const imgRectH = require('../../images/rect-h.jpeg')
 const imgSquare = require('../../images/square.jpeg');
 
 export default class CardList extends Component {
+  config = {
+    navigationBarTitleText: 'CatCard组件'
+  }
   render() {
     const catList = [
       {

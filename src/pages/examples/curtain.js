@@ -4,6 +4,9 @@ import { CatButton, CatCurtain } from '../../index.js';
 import './index.less';
 
 export default class Curtain extends Component {
+  config = {
+    navigationBarTitleText: 'CatCurtain组件'
+  }
   constructor() {
     super();
     this.state = {

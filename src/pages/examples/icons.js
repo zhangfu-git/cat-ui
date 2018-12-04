@@ -4,6 +4,9 @@ import './index.less';
 import { CatRow, CatCol, CatIcon } from '../../index.js';
 
 export default class Icons extends Component {
+  config = {
+    navigationBarTitleText: 'CatIcon组件'
+  }
   render() {
     return (
       <View>

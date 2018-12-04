@@ -5,6 +5,9 @@ import '../../index.less';
 import './index.less';
 
 export default class Layout extends Component {
+  config = {
+    navigationBarTitleText: '栅格布局组件'
+  }
   render() {
     return (
       <View>

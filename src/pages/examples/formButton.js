@@ -4,6 +4,9 @@ import { CatFormButton } from '../../index.js';
 import './index.less';
 
 export default class FormButton extends Component {
+  config = {
+    navigationBarTitleText: 'CatFormButton组件'
+  }
   constructor() {
     super();
     this.state = {

@@ -4,6 +4,9 @@ import './index.less';
 import { CatGrid, CatPanel } from '../../index.js';
 
 export default class Grids extends Component {
+  config = {
+    navigationBarTitleText: 'CatGrid组件'
+  }
   constructor() {
     super();
     this.state = {
