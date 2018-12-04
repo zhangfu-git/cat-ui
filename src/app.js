@@ -7,14 +7,14 @@ class App extends Component {
 
   config = {
     pages: [
-      'pages/examples/searchBars',
       'pages/guide/index',
+      'pages/examples/icons',
       'pages/index/index',
+      'pages/examples/searchBars',
       'pages/examples/cardList',
       'pages/examples/curtain',
       'pages/examples/formButton',
       'pages/examples/grids',
-      'pages/examples/icons',
       'pages/examples/layout',
       'pages/examples/rates',
       'pages/examples/avatars',
@@ -26,21 +26,7 @@ class App extends Component {
       navigationBarBackgroundColor: '#fff',
       navigationBarTitleText: 'WeChat',
       navigationBarTextStyle: 'black'
-    },
-    // "tabBar": {
-    //   "color": "#999999",
-    //   "selectedColor": "#1cbbb4",
-    //   "backgroundColor": "#ffffff",
-    //   "borderStyle": "black",
-    //   "list": [{
-    //     "pagePath": "pages/index/index",
-    //     "text": "UI列表"
-    //   },
-    //   {
-    //     "pagePath": "pages/index/index",
-    //     "text": "关于我"
-    //   }]
-    // }
+    }
   }
 
   componentDidShow () {
