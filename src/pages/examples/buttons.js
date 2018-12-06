@@ -79,6 +79,7 @@ export default class Buttons extends Component {
           </CatButton>
           <CatButton
             disabled
+            shape="circle"
             block
             className = "mb20"
           >
