@@ -55,14 +55,14 @@ export default class CatGrid extends Component {
                   <View className="cat-grid-image-box">
                     {
                       i.image ?
-                        <Image className="cat-grid-image" src={i.image}></Image>
+                        <Image className="cat-grid-image" mode="scaleToFill" src={i.image}></Image>
                       : (
                         i.fontIcon &&
                         <CatIcon type={i.fontIcon} />
                       )
                     }
                   </View>
-                  <View className="cat-grid-title">{i.title}</View>
+                  <View className='cat-grid-title'>{i.title}</View>
                 </View>                
               )
             })

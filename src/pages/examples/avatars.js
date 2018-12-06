@@ -31,8 +31,7 @@ export default class Avatars extends Component {
         <View className="title">头像Demo</View>
         <CatPanel
           title="默认形状头像(文字)"
-          isNoBorder
-          className="flex-cm"
+          bodyClass="flex-cm"
         >
           <CatAvatar size="small">张</CatAvatar>
           <CatAvatar>Hi</CatAvatar>
@@ -40,8 +39,7 @@ export default class Avatars extends Component {
         </CatPanel>
         <CatPanel
           title="circle形状"
-          isNoBorder
-          className="flex-cm"
+          bodyClass="flex-cm"
         >
           <CatAvatar
             size="small"
@@ -63,8 +61,7 @@ export default class Avatars extends Component {
         </CatPanel>
         <CatPanel
           title="图片模式"
-          isNoBorder
-          className="flex-cm"
+          bodyClass="flex-cm"
         >
           <CatAvatar
             src={this.avatarUrl}

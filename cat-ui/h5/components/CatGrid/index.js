@@ -50,7 +50,7 @@ export default class CatGrid extends Component {
           {item.map((i, _index) => {
           return <View className={catGridCls} key={i.title} onClick={this.clickGrid.bind(this, item, index, _index)}>
                   <View className="cat-grid-image-box">
-                    {i.image ? <Image className="cat-grid-image" src={i.image}></Image> : i.fontIcon && <CatIcon type={i.fontIcon} />}
+                    {i.image ? <Image className="cat-grid-image" mode="scaleToFill" src={i.image}></Image> : i.fontIcon && <CatIcon type={i.fontIcon} />}
                   </View>
                   <View className="cat-grid-title">{i.title}</View>
                 </View>;

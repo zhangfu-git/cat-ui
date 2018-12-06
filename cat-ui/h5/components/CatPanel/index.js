@@ -24,11 +24,11 @@ export default class CatPanel extends Component {
     }
   }
   render() {
-    const { title, isLink, linkDesc, titleClass, isNoBorder, isNoBackground, isNoPadding, src, className } = this.props;
-    const noBorderCls = isNoBorder ? 'no-border' : '';
-    const noBackgroundCls = isNoBackground ? 'no-background' : '';
-    const noPaddingCls = isNoPadding ? 'no-padding' : '';
-    return <View className="cat-panel">
+    const { title, isLink, linkDesc, titleClass, hasBorder, hasBackground, hasPadding, src, className, bodyClass } = this.props;
+    const noBorderCls = !hasBorder ? 'no-border' : '';
+    const noBackgroundCls = !hasBackground ? 'no-background' : '';
+    const noPaddingCls = !hasPadding ? 'no-padding' : '';
+    return <View className={`cat-panel ${className}`}>
         <View className="cat-panel_header">
           {title && <View className={`cat-panel-title ${titleClass}`}>{title}</View>}
           {isLink && <View className={`cat-panel-link ${src ? '' : 'text-line-through'}`} onClick={this.handleClickLink}>
@@ -36,7 +36,7 @@ export default class CatPanel extends Component {
               <CatIcon type="icon-right" />
             </View>}
         </View>
-        <View className={`cat-panel_body ${noBorderCls} ${noBackgroundCls} ${noPaddingCls} ${className}`}>
+        <View className={`cat-panel_body ${noBorderCls} ${noBackgroundCls} ${noPaddingCls} ${bodyClass}`}>
           {this.props.children}
         </View>
       </View>;
