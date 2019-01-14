@@ -12,3 +12,4 @@ export { default as CatGrid } from './components/CatGrid/index.js';
 export { default as CatFormButton } from './components/CatFormButton/index.js';
 export { default as CatCurtain } from './components/CatCurtain/index.js';
 export { default as CatCard } from './components/CatCard/index.js';
+export { default as CatFilterBar } from './components/CatFilterBar/index.js';

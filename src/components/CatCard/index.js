@@ -11,26 +11,53 @@ export default class CatCard extends Component {
     imagePosition: 'right',
     shape: 'rect-w'
   }
+  onClick() {
+    const { path } = this.props;
+    if (path) {
+      Taro.navigateTo({
+        url: path
+      });
+    }
+    this.props.onClick();
+  }
   render() {
-    const { src, imagePosition, shape, imgBoxClass, imgClass } = this.props;
+    let { src, imagePosition, shape, imgBoxClass, imgClass, multiImage, imgBoxStyle } = this.props;
     const catCardCls = `cat-card cat-card__img-${imagePosition} cat-card__img-${shape}`;
+    const isArrayFromSrc = Array.isArray(src);
+    if (isArrayFromSrc) {
+      multiImage = true;
+    } else {
+      multiImage = false;
+    }
     return (
-      <View className={catCardCls}>
-        <View className="cat-card__main">
-          <View className="cat-card__info-header">
-            {
-              this.props.renderInfoHeader
-            }
+      <View className='cat-card__contaienr' onClick={this.onClick}>
+        <View className={catCardCls}>
+          <View className="cat-card__main">
+            <View className="cat-card__info-header">
+              {
+                this.props.renderContent
+              }
+            </View>
           </View>
-          <View className="cat-card__info-footer">
+          <View className={`cat-card__img-box ${imgBoxClass}`} style={imgBoxStyle}>
             {
-              this.props.renderInfoFooter
+              multiImage
+              ?
+              <View className="array-image__container">
+                {
+                  src.map((item, index) => {
+                    return index <= 2 &&<Image key={item} mode="aspectFill" src={item} className='array-image'></Image>
+                  })
+                }
+              </View>
+              :
+              <Image mode="aspectFill" src={src} className={`cat-card-img ${imgClass}`}></Image>
             }
           </View>
         </View>
-        <View className={`cat-card__img-box ${imgBoxClass}`}>
-          <Image mode="scaleToFill" src={src} className={`cat-card-img ${imgClass}`}></Image>
-        </View>        
+        <View className="cat-card__footer">
+          { imagePosition === 'bottom' && this.props.renderFooter}
+        </View>
       </View>
     );
   }

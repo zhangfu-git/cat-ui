@@ -1,0 +1,49 @@
+@import '../common/index.less';
+
+.cat-filter-bar {
+  font-family: PingFangSC-Semibold;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1rpx solid #E2E2E2;
+  border-bottom: 1rpx solid #E2E2E2;
+  padding: 20rpx 0;
+  box-sizing: border-box;
+  height: 88rpx;
+  background-color: #fff;
+  z-index: 10;
+}
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+.filter-key {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.label {
+  font-size: 32rpx;
+  color: #4A4A4A;
+}
+.icon-box {
+  font-size: 16rpx;
+  color: #4A4A4A;
+  margin-left: 10rpx;
+}
+.icon {
+  font-size: 16rpx;
+  color: #4A4A4A;
+}
+.active {
+  .label {
+    color: @theme;
+  }
+  .icon, .icon-box {
+    color: @theme;
+  }
+}

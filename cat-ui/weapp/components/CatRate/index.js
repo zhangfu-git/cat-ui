@@ -14,9 +14,15 @@ export default class CatRate extends Component {
       fraction: 0
     }
   }
-  componentDidMount() {
-    let { value, max, step } = this.props;
+  componentDidShow() {
+    this.computedSart(this.props);
+  }
+  computedSart(props) {
+    let { value, max, step } = props;
     let list = [];
+
+    console.log('value:::', value)
+
     // max不是数值，则用户默认5
     if (!isNumber(max)) {
       max = 5;
@@ -55,6 +61,12 @@ export default class CatRate extends Component {
       fraction: value
     });
   }
+  componentWillReceiveProps(next, prev) {
+    if (next) {
+      next.value = next.value ? next.value : 0;
+      this.computedSart(next);
+    }
+  }
   clickStar(item, index) {
     const { disabled } = this.props;
     if (disabled) return;
@@ -78,7 +90,7 @@ export default class CatRate extends Component {
     }
   }
   render() {
-    const { size, className, showDesc, desc, descPosition } = this.props;
+    const { size, className, showDesc, desc, descPosition, descClass } = this.props;
     const { list } = this.state;
     const sizeCls = `cat-rate__${size} ${className}`;
     const starList = list.map((item, index) => {
@@ -112,12 +124,12 @@ export default class CatRate extends Component {
       <View className="cat-rate">
         {
           pos === 'left' && showDesc &&
-          <View className="cat-rate__desc cat-rate__desc-left">{currDesc}</View>
+          <View className={`cat-rate__desc cat-rate__desc-left ${descClass}`}>{currDesc}</View>
         }
         {starList}
         {
           pos === 'right' && showDesc &&
-          <View className="cat-rate__desc">{currDesc}</View>
+          <View className={`cat-rate__desc ${descClass}`}>{currDesc}</View>
         }
       </View>
     );

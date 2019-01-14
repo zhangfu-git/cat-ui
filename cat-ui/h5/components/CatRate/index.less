@@ -1,40 +1,44 @@
 @import '../common/icon.less';
 
 .cat-rate {
-  .cat-rate__icon {
-    position: relative;
-    display: inline-block;
-    font-size: 32rpx;
-    margin-right: 10rpx;
-  }
-  .cat-rate__small {
-    font-size: 28rpx;
-  }
-  .cat-rate__large {
-    font-size: 36rpx;
-  }
-  .cat-rate__dark {
-    color: #999;
-  }
-  .cat-rate__light {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    color: #ffca3e;
-    overflow: hidden;
-    transition: all .1s ease;
-  }
-  .cat-rate__desc {
-    display: inline;
-    font-size: 26rpx;
-    color: #666;
-  }
-  .cat-rate__desc-left {
-    margin-right: 10rpx;
-  }
+  font-family: PingFangSC-Semibold;
+  display: flex;
+  align-items: center;
+}
+.cat-rate__icon {
+  position: relative;
+  display: inline-block;
+  font-size: 32rpx;
+  margin-right: 10rpx;
+}
+.cat-rate__small {
+  font-size: 28rpx;
+}
+.cat-rate__large {
+  font-size: 36rpx;
+}
+.cat-rate__dark {
+  color: #999;
+}
+.cat-rate__light {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  color: #f1a31b;
+  overflow: hidden;
+  transition: all .1s ease;
+}
+.cat-rate__desc {
+  display: inline;
+  font-size: 34rpx;
+  color: #666;
+  font-weight: bold;
+}
+.cat-rate__desc-left {
+  margin-right: 10rpx;
+}
   // .cat-rate__desc-right {
   //   margin-left: 10rpx;
   // }
-}

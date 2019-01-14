@@ -53,20 +53,31 @@ export default class CardList extends Component {
         shape: 'square',
         imagePosition: 'bottom',
         imgBoxClass: 'height400'
+      },
+      {
+        title: 'CatCard示例6',
+        content: '这是一个图片在下方的例子, 具体的item内容需要自己去控制是否超出',
+        src: [imgSquare, imgSquare, imgSquare, imgSquare],
+        shape: 'square',
+        multiImage: true,
+        imagePosition: 'bottom',
+        imgBoxClass: 'height300'  
       }
     ]
     return (
       <View className="page-container gray-bg">
         <View className="title">Card示例</View>
         {
-          catList.map((item) => {
+          catList.map((item, index) => {
             return (
               <CatCard
+                key={index}
                 src={item.src}
                 shape={item.shape}
                 imagePosition={item.imagePosition}
                 imgBoxClass={item.imgBoxClass}
-                renderInfoHeader={
+                multiImage={item.multiImage}
+                renderContent={
                   <View className="item-demo">
                     <View className="item-demo__title">
                       {item.title}
@@ -76,8 +87,8 @@ export default class CardList extends Component {
                     </View>
                   </View>
                 }
-                renderInfoFooter={
-                  <View></View>
+                renderFooter={
+                  <View>信息</View>
                 }
               />
             );

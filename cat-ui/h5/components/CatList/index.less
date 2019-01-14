@@ -1,13 +1,14 @@
 @import '../common/index.less';
 
 .cat-list {
+  font-family: PingFangSC-Semibold;
   display: flex;
   align-items: center;
-  padding: 20rpx 0;
+  padding: 30rpx 10rpx;
   box-sizing: border-box;
   border-radius: 6rpx;
   background: #fff;
-  border-bottom: 1rpx solid #dddee1;
+  border-bottom: 1rpx solid #f6f6f6;
 }
 .cat-list_icon {
   display: inline-block;
@@ -19,7 +20,9 @@
   flex-grow: 1;
 }
 .cat-list-title {
-  color: @title;
+  color: #4c4c4c;
+  font-size: 34rpx;
+  font-weight: 600;
 }
 .cat-list-desc {
   color: @content;
@@ -29,6 +32,6 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  color: @subColor;
-  font-size: 22rpx;
+  color: #e1e1e1;
+  font-size: 36rpx;
 }

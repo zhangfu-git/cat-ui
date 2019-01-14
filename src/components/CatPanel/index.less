@@ -1,28 +1,34 @@
 @import '../common/index.less';
 
 .cat-panel {
+  font-family: PingFangSC-Semibold;
   position: relative;
   width: 100%;
   overflow: hidden;
   color: @content;
-  margin-bottom: 10rpx;
+  background-color: #fff;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #f6f6f6;
+  padding-bottom: 56rpx;
 }
 .cat-panel_header {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
-  padding-bottom: 10rpx;
+  align-items: flex-end;
+  padding: 0 20rpx 10rpx 20rpx;
 }
 .cat-panel-title {
   flex-grow: 1;
+  font-weight: 600;
+  font-size: 36rpx;
 }
 .cat-panel-link {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  font-size: 22rpx;
-  color: @subColor;
+  font-size: 28rpx;
+  color: #9B9B9B;
   &:active {
     color: @disabled;
   }
@@ -32,10 +38,8 @@
   color: @disabled;
 }
 .cat-panel_body {
-  padding: 10rpx;
   box-sizing: border-box;
-  border: 1rpx solid @border;
-  background-color: #fff;
+  // padding: 30rpx 30rpx 10rpx 30rpx;
 }
 .no-border {
   border: none;

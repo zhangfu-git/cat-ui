@@ -1,11 +1,12 @@
 @import '../common/index.less';
 
 .cat-btn {
+  font-family: PingFangSC-Semibold;
   display: inline-flex;
   justify-items: center;
   align-items: center;
   color: @content;
-  padding: 4rpx 40rpx;
+  padding: 0rpx 36rpx;
   margin: 0;
   font-size: 24rpx;
   text-decoration: none;
@@ -23,6 +24,7 @@
 .cat-btn__primary {
   color: #fff;
   background-color: @theme;
+  background: linear-gradient(to bottom right, #21C3A8 32%, #1AB2C0 100%);
   &:active {
     background-color: @theme_hover;
   }
@@ -49,11 +51,14 @@
   }
 }
 .cat-btn__small {
-  padding: 10rpx 20rpx;
+  padding: 0rpx 30rpx;
   font-size: 24rpx;
+  &.cat-btn__circle {
+    border-radius: 32rpx;
+  }
 }
 .cat-btn__large {
-  padding: 19rpx 35rpx;
+  padding: 16rpx 30rpx;
   font-size: 36rpx;
 }
 .cat-btn__is-block {

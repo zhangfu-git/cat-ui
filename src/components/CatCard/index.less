@@ -1,12 +1,16 @@
 // 控制图片的位置
+.cat-card__contaienr {
+  font-family: PingFangSC-Semibold;
+  width: 100%;
+  background-color: #fff;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 10rpx;
+  margin-bottom: 10rpx;  
+}
 .cat-card {
   display: flex;
   width: 100%;
-  overflow: hidden;
-  background-color: #fff;
-  padding: 10rpx;
-  margin-bottom: 10rpx;
-  box-sizing: border-box;
   &.cat-card__img-top {
     flex-direction: column-reverse;
     .cat-card__img-box {
@@ -92,4 +96,16 @@
   .cat-card__main {
     height: inherit;
   }
+}
+
+.array-image__container {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  width: 100%;
+  height: 100%;
+}
+.array-image {
+  width: 33%;
+  height: 100%;
 }

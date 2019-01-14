@@ -16,9 +16,9 @@ export default class CatGrid extends Component {
   clickGrid(item, parentIndex, _index) {
     const { columnNum, isLink } = this.props;
 
-    if (isLink && item.src) {
+    if (isLink && item[_index].src) {
       Taro.navigateTo({
-        url: item.src
+        url: item[_index].src
       });
       return;
     }
